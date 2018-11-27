@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  form(method='POST' action='/api')
+    div
+      label(for="imageUrl")= "Image URL:"
+      input#imageUrl(name="imageUrl")
+    div
+      label(for="imageWidth")= "Width:"
+      input#imageWidth(name="imageWidth")
+    div
+      label(for="imageHeight")= "Height:"
+      input#imageHeight(name="imageHeight")
+    div
+      button(type='submit')= "Process image"
